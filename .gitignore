@@ -1,0 +1,13 @@
+.vscode
+.idea
+.DS_Store
+.VSCodeCounter
+.docker
+docker
+*.log
+node_modules
+coverage
+dist
+.env*
+!.env.example
+!.env.test
