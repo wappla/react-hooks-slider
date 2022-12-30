@@ -4,7 +4,7 @@ import useSliderSwiping from './hooks/useSliderSwiping'
 import useSliderPosition from './hooks/useSliderPosition'
 import useSliderSequence from './hooks/useSliderSequence'
 
-const useSlider = (initialSlideIndex, autoplaySpeed, slidesAreRendered = true) => {
+const useSlider = (initialSlideIndex, autoplaySpeed) => {
     const [slideCount, setSlideCount] = useState(0)
     const containerRef = useRef(null)
     const slideRefs = useRef([])
@@ -24,7 +24,6 @@ const useSlider = (initialSlideIndex, autoplaySpeed, slidesAreRendered = true) =
     const {
         isAtEnd,
         position,
-        animation,
         isDisabled,
         setPosition,
     } = useSliderPosition({
@@ -48,14 +47,12 @@ const useSlider = (initialSlideIndex, autoplaySpeed, slidesAreRendered = true) =
     })
 
     useEffect(() => {
-        if (slidesAreRendered) {
-            setSlideCount(slideRefs.current.length)
-        }
-    }, [slideRefs.current.length, slidesAreRendered])
+        setSlideCount(slideRefs.current.length)
+    }, [slideRefs.current.length])
+
     return {
         position,
         isSwiping,
-        animation,
         slideRefs,
         isDisabled,
         activeSlide,
