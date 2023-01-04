@@ -60,6 +60,7 @@ const {
 } = useSlider(
     initialSlideIndex, // defaults to 0
     autoplaySpeed, // time in ms to go to next slide. Defaults to 0 = inactive
+    slidesAreRendered, // passes if the slides are rendered. This fixes layout issues with conditional rendering. Defaults to true
 }
 ```
 
