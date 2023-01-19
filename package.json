@@ -1,7 +1,7 @@
 {
   "name": "@dashdot/react-hooks-slider",
-  "version": "0.0.3",
-  "description": "A slider for react based on hooks for ultimate customizability",
+  "version": "0.0.4",
+  "description": "A headless, customizable slider for React using hooks.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "license": "MIT",
