@@ -5,7 +5,7 @@ const useIsInViewport = (ref, options = {}) => {
 
     const observer = useMemo(() => {
         if (typeof window === 'undefined' && typeof document === 'undefined') {
-            return null
+            return
         }
         return new IntersectionObserver(
             ([entry]) => setIsIntersecting(entry.isIntersecting),
@@ -15,7 +15,7 @@ const useIsInViewport = (ref, options = {}) => {
 
     useEffect(() => {
         if (!ref || !observer) {
-            return null
+            return
         }
         observer.observe(ref)
         return () => observer.disconnect()
