@@ -53,7 +53,7 @@ const useSliderSequence = ({
     })
     useEffect(() => {
         if (autoplaySpeed === 0 || slideCount === 0) {
-            return null
+            return
         }
         if (isInView) {
             startInterval()
